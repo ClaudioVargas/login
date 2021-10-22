@@ -1,0 +1,40 @@
+<section class="border mt-3">
+    <div class="row">
+        <div class="col-md-4 offset-md-8 border">
+            <span>
+                <b> Nombre: {{usuario.firstName}} {{usuario.lastName}} </b>
+            </span>
+            <span class="pointer">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                </svg>
+            </span>
+        </div>
+    </div>
+    <h1>Peliculas en estreno</h1>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <!-- <div class="carousel-inner">
+        <div class="carousel-item active" *ngFor="let img of imagenes">
+            <img [src]="img.path" class="d-block w-100" width="200" height="100">
+        </div>
+    </div> -->
+        <carousel [images]="imagenes" [autoplay]=true>
+        </carousel>
+    </div>
+</section>
+
+<section class="border mt-5 ">
+    <h2>Peliculas mas populares</h2>
+    <div class="row">
+        <div class="col-md-2 border"  *ngFor="let img of imagenes">
+            <div class="m-3" style="padding: 3px; border: 1px red solid;">
+                <h5><b> {{img.title}} </b></h5>
+                <img [src]="img.path" width="100%">
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,10 @@
+<div class="row d-flex justify-content-center text-center mt-5">
+    
+    <div class="card" style="width: 50%;">
+        <form  [formGroup]="loginForm">
+            <input class="mt-2 mb-2 w-100" placeholder="Ingrese un usuario" type="text" formControlName="user" >
+            <input class="mt-2 mb-2 w-100" placeholder="Ingrese un password" type="password" formControlName="password">
+            <button class="mb-2" (click)="iniciarSesion()" [disabled]="!loginForm.valid"> Iniciar sesion</button>
+        </form>
+    </div>
+</div>
